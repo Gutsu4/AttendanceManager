@@ -1,0 +1,18 @@
+.add-btn, .edit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff; /* 通常時の背景色を青に設定 */
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.add-btn:hover, .edit-btn:hover {
+    background-color: #0056b3; /* ホバー時の背景色を濃い青に設定 */
+    color: white; /* ホバー時のテキスト色を白に保持（必要に応じて変更） */
+}
+
+

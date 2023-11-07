@@ -1,0 +1,13 @@
+.work_btn {
+    display: flex;
+    flex-wrap: wrap; /* ボタンが折り返されて2行に表示されるようにします */
+    justify-content: space-around;
+    width: 60%;
+    margin: 20px 0;
+}
+
+.work_btn input[type="button"] {
+    flex: 1 0 calc(50% - 10px); /* 50% の幅で、少しのマージンを引いたサイズを持つボタンを生成します */
+    margin: 5px;
+    text-align: center;
+}

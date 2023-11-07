@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>add user</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/admin/admin_user_mng.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/admin/admin_menu">管理者メニュー</a></li>
+            <li><a href="/admin/admin_user_manager">ユーザー管理</a></li>
+            <li><a href="/admin/admin_workplace_manager">勤務場所管理</a></li>
+            <li><a href="/admin/admin_attendance_total_hours">勤務時間集計</a></li>
+            <li><a href="/doLogout">ログアウト</a></li>
+        </ul>
+    </nav>
+    <h1>ユーザー追加</h1>
+
+    <div class="AddForm">
+        <form name="addUser" method="post" action="/add">
+            <label>ユーザID</label>
+            <input type="text" id="userid" name="userid" required>
+            <label>パスワード</label>
+            <input type="password" id="userpassword" name="password" required>
+            <label>権限</label>
+            <label><input type="radio" name="role" value="user" required>一般ユーザ</label>
+            <label><input type="radio" name="role" value="admin" required>管理者</label>
+            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+            <button type="submit" class="submit-button add-btn">追加</button>
+        </form>
+    </div>
+
+</body>
+</html>

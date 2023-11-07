@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/user/mainmenu.css">
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/user/mainmenu">勤怠入力</a></li>
+            <li><a href="/user/workplace_regist">勤務場所登録</a></li>
+            <li><a href="/user/contact_regist">連絡先登録</a></li>
+            <li><a href="/user/attendance_history_view">勤怠履歴一覧</a></li>
+            <li><a href="/user/attendance_all_view">勤怠状況一覧</a></li>
+            <li><a href="/doLogout">ログアウト</a></li>
+        </ul>
+    </nav>
+    <h1>勤怠入力</h1>
+    <h4>こんにちはuser id : <span th:text="${user_id}"> さん</span></h4>
+    <h4>現在の勤務状態 : 未出勤(仮)</h4>
+    <h3 id="dateTime">test</h3>
+
+    <div class="work_btn">
+        <input type="button" id="clock_in" name="clock_in_btn" value="出勤">
+        <input type="button" id="clock_out" name="clock_out_btn" value="退勤">
+        <input type="button" id="break_in" name="clock_in_btn" value="休憩開始">
+        <input type="button" id="break_out" name="clock_out_btn" value="休憩終了">
+    </div>
+    <script src="/js/mainmenu.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>勤怠履歴一覧</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/table.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/user/mainmenu">勤怠入力</a></li>
+      <li><a href="/user/workplace_regist">勤務場所登録</a></li>
+      <li><a href="/user/contact_regist">連絡先登録</a></li>
+      <li><a href="/user/attendance_history_view">勤怠履歴一覧</a></li>
+      <li><a href="/user/attendance_all_view">勤怠状況一覧</a></li>
+        <li><a href="/doLogout">ログアウト</a></li>
+
+    </ul>
+  </nav>
+  <h1>勤怠履歴一覧</h1>
+  <table>
+      <thead>
+      <tr>
+          <th>ユーザーID</th>
+          <th>日付</th>
+          <th>勤務開始時間</th>
+          <th>勤務終了時間</th>
+          <th>休憩時間</th>
+          <th>総労働時間</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="work : ${idWork}">
+          <td th:text="${work.userId}"></td>
+          <td th:text="${work.date}"></td>
+          <td th:text="${work.startTime}"></td>
+          <td th:text="${work.endTime}"></td>
+          <td th:text="${work.breakDuration}"></td>
+          <td th:text="${work.totalWorkTime}"></td>
+      </tr>
+      </tbody>
+  </table>
+
+
+</body>
+</html>

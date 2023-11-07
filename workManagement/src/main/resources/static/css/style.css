@@ -1,0 +1,76 @@
+/* 全体の基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+/* ナビゲーションおよびリンクのスタイル */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #cccccc;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+.back_btn {
+    text-decoration: none;
+    background-color: #6c757d; /* 灰色 */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* 背景色の変更時に滑らかに表示 */
+}
+
+.back_btn:hover {
+    background-color: #565e6a; /* ホバー時は少し暗めの灰色 */
+}
+
+label{
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
